@@ -1,9 +1,9 @@
 <div align="center">
 <br />
 
-![Archi](.github/banner.jpg)
+![Archí](.github/banner.jpg)
 
-<h3>Archi 🔨</h3>
+<h3>Archí 🔨</h3>
 
 #### Node minimal starter package
 
