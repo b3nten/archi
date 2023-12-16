@@ -1,8 +1,11 @@
 {
   "name": "is-jon-schlinkert",
-  "version": "0.69.1",
+  "version": "0.69.2",
   "description": "Find out how much you rely on Jon Schlinkert",
-  "repository": "packageRepo/packageName",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/packageRepo/packageName.git"
+  },
   "license": "MIT",
   "sideEffects": false,
   "type": "module",
@@ -12,7 +15,9 @@
       "import": "./dist/index.mjs"
     }
   },
-  "bin": "./dist/cli.mjs",
+  "bin": {
+    "is-jon-schlinkert": "dist/cli.mjs"
+  },
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
