@@ -1,7 +1,7 @@
 {
-  "name": "packageName",
-  "version": "0.0.0",
-  "description": "",
+  "name": "is-jon-schlinkert",
+  "version": "0.69.0",
+  "description": "Find out how much you rely on Jon Schlinkert",
   "repository": "packageRepo/packageName",
   "license": "MIT",
   "sideEffects": false,
