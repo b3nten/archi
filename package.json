@@ -9,11 +9,10 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.mjs"
     }
   },
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
@@ -21,11 +20,11 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "dev": "vitest dev",
-    "play": "jiti playground",
-    "vite": "vite",
-    "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs . && prettier -c src test",
-    "lint:fix": "eslint --cache --ext .ts,.js,.mjs,.cjs . --fix && prettier -c src test -w",
+    "dev": "tsx src",
+    "play": "tsx playground",
+    "browser": "vite",
+    "lint": "oxlint && prettier -c src test playground",
+    "format": "prettier --write src test playground",
     "prepack": "pnpm run build",
     "release": "pnpm test && changelogen --release && npm publish && git push --follow-tags",
     "test": "pnpm lint && pnpm test:types && vitest run --coverage",
@@ -35,13 +34,10 @@
     "@types/node": "^20.8.9",
     "@vitest/coverage-v8": "^0.34.6",
     "changelogen": "^0.5.5",
-    "eslint": "^8.52.0",
-    "eslint-config-unjs": "^0.2.1",
-    "jiti": "^1.20.0",
     "prettier": "^3.0.3",
+    "tsx": "^4.6.2",
     "typescript": "^5.2.2",
     "unbuild": "^2.0.0",
-    "unocss": "^0.57.1",
     "vite": "^4.5.0",
     "vitest": "^0.34.6"
   },

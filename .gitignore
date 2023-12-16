@@ -3,7 +3,7 @@ coverage
 dist
 types
 .vscode
+.idea
 .DS_Store
-.eslintcache
 *.log*
 *.env*
