@@ -1,6 +1,6 @@
 {
   "name": "is-jon-schlinkert",
-  "version": "0.69.0",
+  "version": "0.69.1",
   "description": "Find out how much you rely on Jon Schlinkert",
   "repository": "packageRepo/packageName",
   "license": "MIT",
@@ -12,6 +12,7 @@
       "import": "./dist/index.mjs"
     }
   },
+  "bin": "./dist/cli.mjs",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -26,7 +27,7 @@
     "lint": "oxlint && prettier -c src test playground",
     "format": "prettier --write src test playground",
     "prepack": "pnpm run build",
-    "release": "pnpm test && changelogen --release && npm publish && git push --follow-tags",
+    "release": "changelogen --release && npm publish && git push --follow-tags",
     "test": "pnpm lint && pnpm test:types && vitest run --coverage",
     "test:types": "tsc --noEmit --skipLibCheck"
   },
