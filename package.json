@@ -1,10 +1,10 @@
 {
-  "name": "is-jon-schlinkert",
+  "name": "we-need-jons-help",
   "version": "0.69.2",
   "description": "Find out how much you rely on Jon Schlinkert",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/packageRepo/packageName.git"
+    "url": "git+https://github.com/b3nten/we-need-jons-help.git"
   },
   "license": "MIT",
   "sideEffects": false,
@@ -16,7 +16,7 @@
     }
   },
   "bin": {
-    "is-jon-schlinkert": "dist/cli.mjs"
+    "we-need-jons-help": "dist/cli.mjs"
   },
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
