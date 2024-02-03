@@ -1,8 +1,8 @@
 {
   "name": "package-name",
   "version": "0.0.0",
-  "description": "package-description",
-  "repository": "git-repo",
+  "description": "Description",
+  "repository": "Repository",
   "publishConfig": {
     "access": "public"
   },
@@ -13,6 +13,10 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
+    },
+    "./lol": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "files": [
@@ -20,9 +24,11 @@
   ],
   "scripts": {
     "dev": "tsx --watch src",
-    "build": "unbuild",
-    "lint": "oxlint && prettier -w src test playground",
-    "release": "changelogen --release && npm publish && git push --follow-tags"
+    "build": "node build",
+    "test": "vitest run",
+    "lint": "oxlint",
+    "format": "prettier -w src playground",
+    "release": "node build && changelogen --release && npm publish && git push --follow-tags"
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^0.34.6",
@@ -31,19 +37,7 @@
     "prettier": "^3.0.3",
     "typescript": "^5.3.3",
     "vitest": "^0.34.6",
-    "unbuild": "^2.0.0"
+    "esbuild": "^0.20.0"
   },
-  "packageManager": "pnpm@8.10.0",
-  "unbuild": {
-    "declaration": true,
-    "entries": [
-      {
-        "builder": "mkdist",
-        "format": "esm",
-        "input": "./src",
-        "ext": ".js",
-        "outDir": "./dist"
-      }
-    ]
-  }
+  "packageManager": "pnpm@8.10.0"
 }
